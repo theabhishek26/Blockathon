@@ -1,37 +1,81 @@
 body {
-  font-family: sans-serif;
-  font-size: 1.5rem;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-img {
-  max-width: 50vw;
-  max-height: 25vw;
-  display: block;
-  margin: auto;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-form {
-  display: flex;
-  justify-content: center;
-  gap: 0.5em;
-  flex-flow: row wrap;
-  max-width: 40vw;
-  margin: auto;
-  align-items: baseline;
+Body{
+  background-image: url('https://img.freepik.com/free-vector/abstract-technological-background_23-2148897676.jpg?w=1060&t=st=1710518303~exp=1710518903~hmac=985e006967576d2df6091075735ee5c2cc26e3a6598610916f873c466fd71354');
+  background-size: cover;
+  height: 100vh;
+  background-position: center center;
 }
 
-button[type="submit"] {
-  padding: 5px 20px;
-  margin: 10px auto;
-  float: right;
+.App{
+  margin:auto;
+  width: 40%;
+  padding: 2rem;
+}
+.Form{
+  backdrop-filter: blur(3px);
+  border: 1px solid white;
+  padding:4rem;
+  margin-top: 6rem;
+}
+.title{
+  color: white;
+}
+.large{
+  font-size: 3rem;
+}
+.input{
+  width: 70%;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid rgba(255, 0, 0, 0);
+}
+.button{
+  border-radius: 4px;
+  border: 1px solid rgba(255, 0, 0, 0);
+  padding: 10px;
+  color:white;
+  background: linear-gradient(112.5deg, rgb(95, 10, 135) 11.4%, rgb(164, 80, 139) 60.2%);
+  /* width: 2px; */
 }
 
-#greeting {
-  margin: 10px auto;
-  padding: 10px 60px;
-  border: 1px solid #222;
+@media only screen and (max-width:900px) and (min-width:400px) {
+  .large{
+    font-size: 2rem;
+  }
+  .Form{
+    margin-top: 1rem;
+    padding: 2rem;
+  }
+  .App{
+    padding: 0;
+    width: 70%;
+  }
 }
-
-#greeting:empty {
-  display: none;
+@media only screen and (max-width:700px) {
+  .t{
+    font-size: 1.9rem !important;
+  }
+  .Form{
+    margin-top: 1rem;
+  }
+  .title{
+    font-size: 1.2rem;
+  }
+  .App{
+    padding: 0;
+    width: 90%;
+  }
 }

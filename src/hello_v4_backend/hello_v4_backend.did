@@ -1,3 +1,13 @@
+// Define the structure of your Interaction
+type Interaction = record {
+  timestamp: nat64;
+  transaction_volume: nat64;
+  smart_contracts_interacted: nat64;
+};
+
+// Define the service that your canister will expose
 service : {
-    "greet": (text) -> (text) query;
+  add_interaction: (text, nat64, nat64, nat64) -> ();
+  get_interactions: (text) -> (vec Interaction) query;
+  calculate_credibility: (text) -> (nat64) query;
 }

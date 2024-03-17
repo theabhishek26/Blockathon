@@ -1,10 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.scss';
+// index.js
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App'; // Assuming your App component is in App.js file
+
+ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+  document.getElementById('root')
 );
